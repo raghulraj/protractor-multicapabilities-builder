@@ -1,0 +1,25 @@
+{
+  "name": "protractor-multicapabilities-builder",
+  "version": "0.0.1",
+  "description": "Small lib utility to generate protractor multicapabilities config on runtime.",
+  "main": "builder.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/raghulraj/protractor-multicapabilities-builder"
+  },
+  "dependencies": {
+    "mkdirp": "~0.3.5"
+  },
+  "keywords": [
+    "multicapabilities",
+    "protractor",
+    "jasmine",
+    "ysb"
+  ],
+  "author": "Raghul Raj V <raghulraj@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/raghulraj/protractor-multicapabilities-builder/issues"
+  },
+  "homepage": "https://github.com/raghulraj/protractor-multicapabilities-builder"
+}
