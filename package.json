@@ -17,9 +17,12 @@
     "ysb"
   ],
   "author": "Raghul Raj V <raghulraj@gmail.com>",
-  "license": "MIT",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/raghulraj/protractor-multicapabilities-builder/issues"
   },
-  "homepage": "https://github.com/raghulraj/protractor-multicapabilities-builder"
+  "homepage": "https://github.com/raghulraj/protractor-multicapabilities-builder",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
 }
