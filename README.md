@@ -1,7 +1,7 @@
 #protractor-multicapabilities-builder
 =========
 
-A utility to dynamically build multicapabilities config file for protractor with basic test group functionalities.
+A utility to dynamically build multicapabilities config file for sauce - protractor with basic test group functionalities.
 
 ## Installation
 
@@ -51,6 +51,7 @@ configure:{
 ```
 
 ##Output file
+
 ```
 module.exports = {
 multiCapabilities:
