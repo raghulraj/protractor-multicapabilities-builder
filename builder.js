@@ -1,32 +1,33 @@
 var fs = require('fs');
-    
-	exports.generate = function (groupsFile,reportFile,testtype) {
-	var config_reader = require(groupsFile);
-	var tests = config_reader.configure[testtype]["Tests"];
-	var devices = config_reader.configure[testtype]["devices"];
-	device_builder(tests,devices,reportFile);
-	};
+var path = require('path');
+
+        exports.generate = function (groupsFile,reportFile,testtype) {
+        var config_reader = require(path.join(__dirname, '../../'+groupsFile));
+        var tests = config_reader.configure[testtype]["Tests"];
+        var devices = config_reader.configure[testtype]["devices"];
+        device_builder(tests,devices,reportFile);
+        };
 
     function device_builder (tests,devices,reportFile) {
-       	var deviceFull = []; 
-	for ( var i in devices) {
+        var deviceFull = [];
+        for ( var i in devices) {
         var obj = devices[i];
-	var browser = obj.split("-")[0];
-	var version = obj.split("-")[1];
-	var deviceArray = device_switcher(tests,browser,version);
-	for(var x in deviceArray){
-  	deviceFull.push(deviceArray[x]);
-	}
-	}
-	var deviceconfiguration = JSON.stringify(deviceFull);
-	fs.writeFileSync(reportFile, "module.exports = {multiCapabilities:");
-	fs.appendFileSync(reportFile, deviceconfiguration);
-	fs.appendFileSync(reportFile, "};");
+        var browser = obj.split("-")[0];
+        var version = obj.split("-")[1];
+        var deviceArray = device_switcher(tests,browser,version);
+        for(var x in deviceArray){
+        deviceFull.push(deviceArray[x]);
+        }
+        }
+        var deviceconfiguration = JSON.stringify(deviceFull);
+        fs.writeFileSync(path.join(__dirname, '../../'+reportFile), "module.exports = {multiCapabilities:");
+        fs.appendFileSync(path.join(__dirname, '../../'+reportFile), deviceconfiguration);
+        fs.appendFileSync(path.join(__dirname, '../../'+reportFile), "};");
         }
 
     function device_switcher(tests,browser,version) {
 	switch(true){
-	case browser === "Chrome" || browser === "Firefox" || browser === "IE":
+	case browser === "Chrome" || browser === "firefox" || browser === "internet explorer":
 	var desktopArray = new Array();
 	desktopArray.push({
                 name: browser,
