@@ -44,7 +44,7 @@ configure:{
         "Samsung Galaxy Nexus-4.3",
         "Chrome-41",
         "Firefox-29",
-        "IE-11"
+        "Internet Explorer-11"
               ]
       }
 }};
@@ -86,4 +86,7 @@ multiCapabilities:
 
 ## Release History
 
-* 0.1.0 Initial release
+* 0.0.1 Initial release
+* 0.0.2 Fixed path issue
+* 0.0.3 Updated Readme.MD
+* 0.0.4 Updated Readme.MD
