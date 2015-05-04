@@ -87,3 +87,4 @@ multiCapabilities:
 * 0.0.3 Updated Readme.MD
 * 0.0.4 Updated Readme.MD
 * 0.0.5 Changes Tests group node to specs and added examples
+* 0.0.6 Minor bug fix

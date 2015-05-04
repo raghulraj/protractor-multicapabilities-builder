@@ -1,6 +1,6 @@
 {
   "name": "protractor-multicapabilities-builder",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Small lib utility to generate protractor multicapabilities config on runtime.",
   "main": "builder.js",
   "repository": {

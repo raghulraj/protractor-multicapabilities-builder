@@ -27,7 +27,7 @@ var path = require('path');
 
     function device_switcher(tests,browser,version) {
 	switch(true){
-	case browser === "Chrome" || browser === "firefox" || browser === "internet explorer":
+	case browser === "Chrome" || browser === "Firefox" || browser === "Internet Explorer":
 	var desktopArray = new Array();
 	desktopArray.push({
         	browserName: browser,
