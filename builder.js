@@ -3,7 +3,7 @@ var path = require('path');
 
         exports.generate = function (groupsFile,reportFile,testtype) {
         var config_reader = require(path.join(__dirname, '../../'+groupsFile));
-        var tests = config_reader.configure[testtype]["Tests"];
+        var tests = config_reader.configure[testtype]["specs"];
         var devices = config_reader.configure[testtype]["devices"];
         device_builder(tests,devices,reportFile);
         };
@@ -30,22 +30,18 @@ var path = require('path');
 	case browser === "Chrome" || browser === "firefox" || browser === "internet explorer":
 	var desktopArray = new Array();
 	desktopArray.push({
-                name: browser,
-		runningversion: version,
-        	specs: tests,
-		browserName: browser,
-		version: version
+        	browserName: browser,
+                version: version,
+		specs: tests
 	});	
 	return desktopArray;
 	break;
 	case browser === "iPhone":
         var mobileArray = new Array();
         mobileArray.push({
-                name: browser,
-                runningversion: version,
-                specs: tests,
                 browserName: browser,
                 version: version,
+		specs: tests,
 		app: "safari",
 		deviceName: "iPhone Simulator",
 		nonSyntheticWebClick: "false",
@@ -57,11 +53,9 @@ var path = require('path');
 	case browser === "Samsung Galaxy Nexus":
                 var mobileArray = new Array();
                 mobileArray.push({
-                    name: browser,
-                    runningversion: version,
-                    specs: tests,
                     browserName: "android",
                     version: version,
+		    specs: tests,
                     deviceName: "Samsung Galaxy Nexus Emulator",
                     platform: "Linux"
                 });
@@ -69,4 +63,3 @@ var path = require('path');
                 break;
 	}
 	}
-//module.exports = Builder;	

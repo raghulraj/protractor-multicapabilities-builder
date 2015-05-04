@@ -26,7 +26,7 @@ params: (inputFile,outputFile,testtype)
 module.exports = {
 configure:{
 "Smoke":{
-    "Tests": [
+    "specs": [
         "../tests/smoke/search-test.js"
             ],
     "devices": [
@@ -35,7 +35,7 @@ configure:{
             ]
       },
 "Functional":{
-      "Tests": [
+      "specs": [
         "../tests/smoke/search-test.js",
         "../tests/smoke/homepage-test.js"
               ],
@@ -57,28 +57,24 @@ module.exports = {
 multiCapabilities:
 [
     {
-        "name": "iPhone",
-        "runningversion": "8.0",
-        "specs": [
-            "../tests/smoke/search-test.js"
-        ],
         "browserName": "iPhone",
         "version": "8.0",
+	"specs": [
+            "../tests/smoke/search-test.js"
+        ],
         "app": "safari",
         "deviceName": "iPhone Simulator",
         "nonSyntheticWebClick": "false",
         "appium-version": "1.3.7"
     },
     {
-        "name": "Samsung Galaxy Nexus",
-        "runningversion": "4.3",
-        "specs": [
-            "../tests/smoke/search-test.js"
-        ],
         "browserName": "android",
         "version": "4.3",
+	"specs": [
+            "../tests/smoke/search-test.js"
+        ],
         "deviceName": "Samsung Galaxy Nexus Emulator",
-        "platfomr": "Linux"
+        "platform": "Linux"
     }
 ]
 };
@@ -90,3 +86,4 @@ multiCapabilities:
 * 0.0.2 Fixed path issue
 * 0.0.3 Updated Readme.MD
 * 0.0.4 Updated Readme.MD
+* 0.0.5 Changes Tests group node to specs and added examples
