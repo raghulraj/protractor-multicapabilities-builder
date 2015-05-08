@@ -11,7 +11,11 @@
     "multicapabilities",
     "protractor",
     "jasmine",
-    "ysb"
+    "ysb",
+    "sauce labs",
+    "protractor configuration builder"
+    "sauce protractor multicapabilities builder",
+    "builder"
   ],
   "author": "Raghul Raj V <raghulraj@gmail.com>",
   "license": "MIT",
