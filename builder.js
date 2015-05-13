@@ -12,9 +12,11 @@ var path = require('path');
         var deviceFull = [];
         for ( var i in devices) {
         var obj = devices[i];
-        var browser = obj.split("-")[0];
-        var version = obj.split("-")[1];
-        var deviceArray = device_switcher(tests,browser,version);
+	var browserobj = obj.split("/")[0];
+	var platform = obj.split("/")[1];
+        var browser = browserobj.split("-")[0];
+        var version = browserobj.split("-")[1];
+        var deviceArray = device_switcher(tests,browser,version,platform);
         for(var x in deviceArray){
         deviceFull.push(deviceArray[x]);
         }
@@ -25,13 +27,14 @@ var path = require('path');
         fs.appendFileSync(path.join(__dirname, '../../'+reportFile), "};");
         }
 
-    function device_switcher(tests,browser,version) {
+    function device_switcher(tests,browser,version,platform) {
 	switch(true){
 	case browser === "Chrome" || browser === "Firefox" || browser === "Internet Explorer":
 	var desktopArray = new Array();
 	desktopArray.push({
         	browserName: browser,
                 version: version,
+	        platform: platform,
 		specs: tests
 	});	
 	return desktopArray;

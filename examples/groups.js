@@ -5,8 +5,8 @@ configure:{
         "../tests/smoke/search-test.js"
             ],
     "devices": [
-        "iPhone-8.0",
-        "Samsung Galaxy Nexus-4.3"
+        "iPhone-8.0/iOS",
+        "Samsung Galaxy Nexus-4.3/Android"
             ]
       },
 "Functional":{
@@ -15,11 +15,11 @@ configure:{
         "../tests/smoke/homepage-test.js"
               ],
     "devices": [
-        "iPhone-8.0",
-        "Samsung Galaxy Nexus-4.3",
-        "Chrome-41",
-        "Firefox-29",
-        "Internet Explorer-11"
+        "iPhone-8.0/iOS",
+        "Samsung Galaxy Nexus-4.3/Android",
+        "Chrome-41/Windows 8.1",
+        "Firefox-29.0/Windows 7",
+        "Internet Explorer-10/Windows 8"
               ]
       }
 }};
